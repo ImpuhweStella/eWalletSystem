@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>E-WALLET - Balance</title>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class="links">
+            <a href="index.xhtml">Home</a>
+        </div>
+        <h:form>
+            <div>
+                <h1>User Account</h1>
+                <p style="margin-bottom: 20px;">You are logged in as <span style="color: #e6f0ff;">#{acc.user}</span></p>
+            </div>
+            <div class="commands">
+                <h:commandButton value="Check balance" action="#{acc.balancePage()}" />
+                <h:commandButton value="Send Money" action="#{acc.transferPage()}" />
+            </div>
+        </h:form> 
+    </h:body>
+</html>
+

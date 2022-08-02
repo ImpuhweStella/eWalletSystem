@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>E-WALLET - create</title>
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="links">
+                <a href="index.xhtml">Home</a>
+            </div>
+            <f:view>
+                <h1>Create Account</h1>
+                <h:form>
+                    <h:messages  id="success-message" class="success-message" infoClass="info" errorClass="error" fatalClass="fatal"/>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="FirstName:" for="firstName" />
+                        <h:inputText id="firstName" value="#{acc.account.firstName}" title="FirstName" />
+                        <h:outputLabel value="LastName:" for="lastName" />
+                        <h:inputText id="lastName" value="#{acc.account.lastName}" title="LastName" />
+                        <h:outputLabel value="Location:" for="location" />
+                        <h:inputText id="location" value="#{acc.account.location}" title="Location" />
+                        <h:outputLabel value="Create Password:" for="password1" />
+                        <h:inputSecret id="password1" value="#{acc.account.password1}" title="Password1" />
+                        <h:outputLabel value="Confirm Password:" for="password2" />
+                        <h:inputSecret id="password2" value="#{acc.account.password2}" title="Password2" />
+                        <h:commandButton value="Create Account" action="#{acc.createAccount()}" />
+                    </h:panelGrid>
+                </h:form>
+            </f:view>
+        </div>
+    </h:body>
+</html>
+
